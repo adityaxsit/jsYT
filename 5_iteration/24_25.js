@@ -23,7 +23,7 @@ let myArr = ["flash", "batman", "superman"]
 //console.log(myArr.length);
 for (let index = 0; index < myArr.length; index++) {
     const element = myArr[index];
-    //console.log(element);
+    //console.log(element                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        );
     
 }
 
