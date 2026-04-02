@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai and code</title>
+</head>
+<body style="background-color: black; color: white;">
+    <div class="weekday">
+        // comment to check no of nodes
+        <div class="day">Monday</div>
+        <div class="day">Tuesay</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+    </div>
+
+</body>
+<script>
+    const parent=document.querySelector('.weekday');
+    /* console.log(parent);
+    console.log(parent.children);
+    console.log(parent.children[1]);
+    console.log(parent.children[1].innerHTML); */
+   /*  for(let i=0;i<parent.children.length;i++){
+        console.log(parent.children[i].innerHTML);
+        
+    } */
+    parent.children[2].style.color='orange';
+
+    /* console.log(parent.firstElementChild.innerHTML);
+    console.log(parent.lastElementChild.innerHTML); */
+
+    const dayOne=document.querySelector('.day');
+   /*  console.log(dayOne);
+    console.log(dayOne.parentElement.innerText); */
+
+    console.log("nodes : ",parent.childNodes);
+    
+    
+
+    
+
+    
+    
+</script>
+</html>
