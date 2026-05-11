@@ -1,0 +1,72 @@
+* {
+  cursor: pointer;
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.countdown div {
+  background: #fff0f7;
+  padding: 1rem;
+  border-radius: 20px;
+}
+
+.countdown span {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff2d8d;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.wishes p {
+  background: #fff8fc;
+  margin: 0.8rem 0;
+  padding: 1rem;
+  border-radius: 16px;
+}
+
+.floating {
+  position: fixed;
+  font-size: 2rem;
+  opacity: 0.6;
+  animation: float 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.f1 { top: 10%; left: 5%; }
+.f2 { top: 20%; right: 8%; }
+.f3 { bottom: 20%; left: 8%; }
+.f4 { bottom: 10%; right: 10%; }
+.f5 { top: 50%; left: 2%; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+#confettiText {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+@media (max-width: 600px) {
+  .title, .welcome-card h1 { font-size: 2.2rem; }
+  .profile { width: 160px; height: 160px; }
+  .countdown { grid-template-columns: repeat(2, 1fr); }
+}
