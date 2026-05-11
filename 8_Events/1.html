@@ -1,22 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events</title>
 </head>
-<body>
+
+<body style="background-color: gray;">
     <h2>PICTURES</h2>
-    <div> 
-        <ul  id="images">
-            <li><img src="8_Events/IMG_20240603_021825.jpg"></li>
-            <li><img src="8_Events/IMG-20240601-WA0019.jpg"></li>
-            <li>><img src="8_Events/IMG-20240606-WA0066.jpg" alt=""></li>
-            <li><img src="8_Events/IMG-20240606-WA0198.jpg"></li>
-            <li><img src="8_Events/IMG-20240606-WA0232.jpg"></li>
-           
+    <div>
+        <ul id="images">
+            <li><img width="200px" height="150" src="https://raw.githubusercontent.com/adityaxsit/jsYT/main/8_Events/IMG-20240601-WA0019.jpg"
+                    alt="temple" onclick="alert('DEKHO MANDIR')"></li> 
+
+            <li><img width="200px" src="https://raw.githubusercontent.com/adityaxsit/jsYT/main/8_Events/IMG-20240606-WA0066.jpg"
+                    alt="maggie" id="maggie"></li>
+
+            <li><img width="200px" src="https://raw.githubusercontent.com/adityaxsit/jsYT/main/8_Events/IMG-20240606-WA0198.jpg"
+                    alt="clouds" id="clouds"></li>
+
+            <li><img width="200px" src="https://raw.githubusercontent.com/adityaxsit/jsYT/main/8_Events/IMG-20240606-WA0232.jpg"
+                    alt="mount" id="mount"></li>
+
+            <li><img width="200px" src="https://raw.githubusercontent.com/adityaxsit/jsYT/main/8_Events/IMG_20240603_021825.jpg"
+                    alt="mememe"></li>
+            <li>
+                <a style="color: aquamarine;" href="https://en.wikipedia.org/wiki/JavaScript" id="JS">wikipedia JS</a>
+            </li>
         </ul>
 
     </div>
 </body>
+<script>
+    /* document.getElementById('maggie').onclick=function(){
+        alert("Maggie lelo 120 ka")
+    } */
+
+
+    /* document.getElementById('clouds').addEventListener('click',function(){
+        alert("Clouds clicked")
+    },false) */
+
+    document.getElementById('images').addEventListener('click',function(e){
+        if(e.target.tagName==='IMG')
+            alert("Images clicked")
+    },false) 
+     /* true => jo phle clciked hoga */
+
+
+    /* document.getElementById('mount').addEventListener('click',function(e){
+        alert("mountain clicked")
+        e.stopPropagation();
+    },flase) */
+
+
+    document.getElementById('JS').addEventListener('click',function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        alert("Nhi jana h udhr")
+    })
+
+    /* to remove the clicked item */
+    document.querySelector('#images').addEventListener('click',function(e){
+
+        //console.log(e.target.tagName)
+        if(e.target.tagName==='IMG'){
+            let item=e.target.parentNode;
+            item.remove();
+        }
+
+
+        // item.parentNode.removeChild(item)   ===> another way of removing items
+    },false)
+
+</script>
+
 </html>
