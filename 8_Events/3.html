@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Learning Async Project</h1>
+    <div style="padding-bottom: 20px;" id="result">Start or Stop</div>
+    <button id="stop">Stop</button>
+    <button id="start">start</button>
+</body>
+<script>
+    let intervalId;
+    const sayName=function(){
+       document.querySelector('#result').innerHTML=`Aditya ${new Date().toLocaleTimeString()}`;
+    }
+    document.querySelector('#start').addEventListener('click',function(){
+        intervalId=setInterval(sayName,1000);
+    })
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearInterval(intervalId);
+        intervalId = null;
+    })
+        
+    
+</script>
+
+</html>
